@@ -1,0 +1,177 @@
+@import "../../style/vars.scss";
+
+div.user-profile-page {
+  display: flex;
+
+  @media screen and (max-width: 900px) {
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+
+    div.photo {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+  }
+
+  div.required-field {
+    input,
+    select {
+      border-color: red;
+    }
+  }
+
+  div.fields {
+    width: 100%;
+
+    label {
+      margin: 10px 0 5px 0;
+    }
+  }
+
+  div.photo {
+    flex-shrink: 0;
+    flex-basis: 40%;
+    margin-right: 40px;
+
+    @media #{$mobileQuery} {
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+  }
+
+  div.photo-required > div {
+    border-color: red;
+  }
+
+  div.profile-photo {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: cover;
+    background-position: center;
+    border: solid 1px $lightGray;
+    background-color: $inputGray;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+
+    input[type="file"] {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+
+    label {
+      cursor: pointer;
+
+      svg {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        fill: $almostBlack;
+
+        &:hover {
+          fill: $almostBlack;
+          background-color: #fff;
+        }
+      }
+
+      &.upload-new svg {
+        padding: 30px;
+        height: 100px;
+        width: 100px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &.upload-edit svg {
+        height: 50px;
+        width: 50px;
+        padding: 10px;
+        top: 10px;
+        left: 10px;
+      }
+    }
+  }
+
+  div.profile-fields {
+    input:disabled {
+      background-color: initial;
+      border: none;
+      box-shadow: none;
+      padding-left: 0;
+    }
+
+    select:disabled {
+      background-color: initial;
+      border: none;
+      box-shadow: none;
+      padding-left: 0;
+      appearance: none;
+    }
+
+    div.field-group {
+      display: flex;
+      justify-content: flex-start;
+      padding: 0;
+      border: none;
+
+      & > div:not(:last-child) {
+        margin-right: 1em;
+      }
+
+      div {
+        flex-basis: 100%;
+        * {
+          width: 100%;
+        }
+      }
+
+      div.security {
+        margin-bottom: 20px;
+      }
+
+      @media #{$mobileQuery} {
+        &.mobile-break {
+          flex-direction: column;
+
+          & > div:not(:last-child) {
+            margin-right: 0em;
+          }
+        }
+      }
+    }
+
+    h3 {
+      color: $darkGray;
+      padding-bottom: 10px;
+      border-bottom: solid 1px $lightGray;
+
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+
+    button {
+      margin-top: 20px;
+
+      &:disabled {
+        cursor: not-allowed;
+      }
+    }
+  }
+}

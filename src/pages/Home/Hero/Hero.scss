@@ -1,0 +1,61 @@
+@import "../../../style/vars.scss";
+
+div.hero {
+  background-color: $brandBlue;
+  padding-top: 40px;
+  margin-top: -$navBottomMargin;
+
+  div.wrap-group {
+    display: inline-block;
+  }
+
+  div.container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+
+    background-image: url("./hero.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 80%;
+
+    @media #{$mobileQuery} {
+      background-size: 100%;
+      background-position-y: bottom;
+      background-position-x: 11vw;
+      min-height: 450px;
+    }
+
+    div.subtitle {
+      color: #fff;
+      font-size: 28px;
+      font-weight: 500;
+      text-align: right;
+      letter-spacing: -0.035em;
+      margin: 10px 0 40px 0;
+
+      @media #{$mobileQuery} {
+        text-align: center;
+      }
+    }
+
+    & > h1 {
+      margin: 0;
+      color: $darkBlue;
+      text-align: right;
+
+      @media #{$mobileQuery} {
+        text-align: center;
+      }
+    }
+
+    div.hero-sign-up {
+      width: 360px;
+      margin-left: auto;
+
+      @media #{$mobileQuery} {
+        display: none;
+      }
+    }
+  }
+}

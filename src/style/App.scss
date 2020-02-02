@@ -1,0 +1,79 @@
+@import "./vars.scss";
+@import "./form.scss";
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 24px;
+  margin: 0;
+  letter-spacing: -0.06em;
+  line-height: 33px;
+}
+
+h3 {
+  font-weight: normal;
+  margin: 0;
+  font-size: 20px;
+}
+
+div.app {
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1em;
+  }
+
+  nav {
+    background-color: $brandBlue;
+    padding: 10px 0;
+    margin-bottom: $navBottomMargin;
+
+    a {
+      color: $darkBlue;
+      text-decoration: none;
+    }
+
+    svg.logo {
+      vertical-align: middle;
+      width: 32px;
+      fill: #fff;
+
+      @media #{$mobileQuery} {
+        width: 40px;
+      }
+    }
+
+    svg.branding {
+      vertical-align: middle;
+      margin-left: 10px;
+      fill: #fff;
+
+      @media #{$mobileQuery} {
+        display: none;
+      }
+    }
+  }
+
+  footer {
+    margin-top: 100px;
+    padding-bottom: 30px;
+
+    svg {
+      fill: $lightGray;
+    }
+
+    a {
+      color: $darkGray;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import "../../../style/vars.scss";
+
+div.sign-up-banner {
+  background-color: $darkBlue;
+  color: #fff;
+  padding: 80px 0;
+
+  @media #{$mobileQuery} {
+    padding: 40px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  div.sign-up-form {
+    background-color: initial;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px auto 0 auto;
+    justify-content: space-evenly;
+    max-width: 800px;
+
+    @media #{$mobileQuery} {
+      flex-direction: column;
+
+      input[type="text"] {
+        margin-bottom: 20px;
+      }
+    }
+
+    input,
+    button {
+      width: 100%;
+    }
+
+    button {
+      margin-top: 1.5em;
+      white-space: nowrap;
+    }
+
+    div {
+      flex-basis: 35%;
+      margin-right: 1em;
+
+      @media #{$mobileQuery} {
+        margin-right: 0;
+      }
+    }
+
+    div:last-child {
+      flex-basis: 20%;
+      margin-right: 0;
+    }
+
+    p {
+      color: $lightGray;
+    }
+
+    div.error-message {
+      order: 4;
+      flex-basis: 100%;
+      margin-top: 0;
+      text-align: right;
+      color: pink;
+    }
+  }
+}

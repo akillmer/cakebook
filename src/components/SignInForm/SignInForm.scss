@@ -1,0 +1,28 @@
+@import "../../style/vars.scss";
+
+div.sign-in-form {
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 1em;
+
+  form {
+    input {
+      width: 100%;
+    }
+
+    input[type="text"] {
+      margin-bottom: 20px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      margin: 10px 0;
+      color: $darkGray;
+    }
+  }
+}

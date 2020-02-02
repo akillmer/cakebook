@@ -1,0 +1,26 @@
+@import "../../style/vars.scss";
+
+div.sign-in-page {
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    color: $darkGray;
+    text-align: center;
+  }
+
+  & > div {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1em;
+    border: solid 1px $lightGray;
+    border-radius: 5px;
+  }
+
+  div.new-user {
+    text-align: center;
+    margin-top: 40px;
+    background-color: $inputGray;
+  }
+}

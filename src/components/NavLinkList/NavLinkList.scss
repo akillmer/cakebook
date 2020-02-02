@@ -1,0 +1,47 @@
+@import "../../style/vars.scss";
+
+ul.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+
+  li:first-child {
+    margin-right: auto;
+  }
+
+  li:not(:first-child):not(:last-child) {
+    margin-right: 30px;
+
+    @media #{$mobileQuery} {
+      margin-right: 15px;
+    }
+  }
+
+  div.signup {
+    background-color: $darkBlue;
+    color: #fff;
+    border-style: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+  }
+}
+
+footer {
+  @media #{$mobileQuery} {
+    ul.nav-links {
+      flex-direction: column;
+
+      li:first-child {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      li:not(:first-child):not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
